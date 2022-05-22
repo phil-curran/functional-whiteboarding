@@ -1,0 +1,32 @@
+// Write an algorithm takes a string with repeated chars and compresses them.
+// Algo should use nubmer to show how many times the repeat character has been compressed.
+// example: aaa = 3a
+
+// input: aaabccdddda = 3ab2c4da
+
+// break function or unexpected input: take a string, but otherwise, no parameters
+
+// without recursions
+
+// with recursion
+
+let argument = "aaab";
+
+const stringReducer = (string) => {
+  // string item
+  let output = "";
+  let count = 0;
+
+  // iterate through string and evaluate each character
+  for (let i = 0; i < string.length; i++) {
+    if (count !== 1) {
+      output += count + string[i];
+    } else {
+      output += string[i];
+    }
+    count = 0;
+  }
+  return output;
+};
+
+// with recursion
